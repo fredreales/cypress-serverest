@@ -1,0 +1,19 @@
+{
+  "name": "cypress-serverest",
+  "version": "1.0.0",
+  "description": "Testes E2E e API automatizados com Cypress para a aplicação ServeRest",
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "cy:run:frontend": "cypress run --spec 'cypress/e2e/frontend/**/*.cy.js'",
+    "cy:run:api": "cypress run --spec 'cypress/e2e/api/**/*.cy.js'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@faker-js/faker": "^10.4.0",
+    "cypress": "^14.5.4",
+    "cypress-ajv-schema-validator": "^2.0.2"
+  }
+}
