@@ -24,7 +24,7 @@ jobs:
           spec: cypress/e2e/api/**/*.cy.js
           browser: chrome
         env:
-          CYPRESS_apiUrl: ${{ secrets.CYPRESS_API_URL }}
+          CYPRESS_apiUrl: ${{ secrets.CYPRESS_apiUrl }}
 
       - name: Upload screenshots on failure
         uses: actions/upload-artifact@v4
@@ -47,7 +47,7 @@ jobs:
           spec: cypress/e2e/frontend/**/*.cy.js
           browser: chrome
         env:
-          CYPRESS_apiUrl: ${{ secrets.CYPRESS_API_URL }}
+          CYPRESS_apiUrl: ${{ secrets.CYPRESS_apiUrl }}
 
       - name: Upload screenshots on failure
         uses: actions/upload-artifact@v4
