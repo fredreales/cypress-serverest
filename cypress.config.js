@@ -1,7 +1,5 @@
 const { defineConfig } = require('cypress')
 
-// Sensitive values (adminEmail, adminPassword, apiUrl) come from cypress.env.json (gitignored).
-// Copy cypress.env.json.example → cypress.env.json and fill in the values before running.
 module.exports = defineConfig({
   e2e: {
     baseUrl: 'https://front.serverest.dev',
@@ -17,14 +15,13 @@ module.exports = defineConfig({
       runMode: 2,
       openMode: 0,
     },
-    setupNodeEvents(on) {
-      on('task', {
-        log({ label, ids }) {
-          console.log(`\n=== ${label} ===`)
-          ids.forEach((id) => console.log(' ', id))
-          return null
-        },
-      })
+    setupNodeEvents(_on, config) {
+      // Generate unique admin credentials per run to avoid conflicts on the shared ServeRest API
+      const ts = Date.now()
+      config.env.adminEmail    = `admin_${ts}@qarun.com`
+      config.env.adminPassword = 'Cypress@run1'
+
+      return config
     },
   },
 })
