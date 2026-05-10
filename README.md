@@ -1,6 +1,6 @@
 # Cypress ServeRest — Test Automation
 
-![CI](https://github.com/<your-username>/cypress-serverest/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/fredreales/cypress-serverest/actions/workflows/ci.yml/badge.svg)
 
 Automated E2E and API tests with **Cypress** for the [ServeRest](https://front.serverest.dev/) application.
 
