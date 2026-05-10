@@ -94,6 +94,8 @@ This means no hardcoded credentials anywhere in the codebase, and no dependency 
 npm install
 ```
 
+> This project uses [`cypress-ajv-schema-validator`](https://github.com/filiphric/cypress-ajv-schema-validator) for JSON Schema validation. It is already listed in `package.json` and installed with `npm install` — no extra steps needed.
+
 **`cypress.env.json`** (gitignored) only needs the API URL:
 
 ```json
